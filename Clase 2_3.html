@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+</head>
+<body>
+
+	<script>
+		var precio = parseFloat(prompt("Precio del Producto: "));
+		var cant = parseInt(prompt("Cantidad: "));
+
+		if (isNaN(cant))
+			alert("Cantidad Invalida")
+		else{
+			if (isNaN(precio))
+				alert("Cantidad Invalida")
+			else{
+				if (cant >= 12){
+					desc = 0.05;
+				}
+				else{
+					var desc = 0
+				}
+
+				var subtotal = precio*cant;
+				var descuento = subtotal*desc
+				var nuevosub = subtotal-descuento
+				var iva = nuevosub*0.12;
+				var total = nuevosub+iva;
+				iva=iva.toFixed(2)
+				subtotal=subtotal.toFixed(2)
+				total=total.toFixed(2)
+				alert("El Subtotal es "+subtotal+" Bs \n"+
+				"El Descuento Obtenido es de "+descuento+" Bs \n"+
+				"EL nuevo Subtotal es de "+nuevosub+" Bs \n"+
+				"El IVA es "+iva+" Bs \n"+
+				"El Total es "+total+" Bs")
+				}
+			}	
+	</script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+</head>
+<body>
+
+	<script>
+		var notaDes= prompt("Nota Desafios: ");
+		var notaExa= prompt("Nota Examen: ");
+
+		if (notaDes == null)
+		{
+			alert("Debe Escribir un Numero");
+		}
+		else
+		{
+			if (isNaN(notaDes))
+			{
+			alert("Es una Valor Invalido");
+			}
+			else
+			{
+				if (notaDes >100 || notaDes < 0)
+					alert("Debe Escribir un Valido Valido entre 1 y 100");
+				else
+				{	
+					if (notaDes >= 80)
+						alert ("Aprobo los Desafios");
+					else
+						alert ("Reporobo los Desafios");
+				}
+			}
+		}
+
+		if (notaExa == null)
+		{
+			alert("Debe Escribir un Numero");
+		}
+		else
+		{
+			if (isNaN(notaExa))
+			{
+			alert("Es una Valor Invalido");
+			}
+			else
+			{
+				if (notaExa >100 || notaExa < 0)
+					alert("Debe Escribir un Valido Valido entre 1 y 100");
+				else
+				{	
+					if (notaExa >= 80)
+						alert ("Aprobo los Desafios");
+					else
+						alert ("Reporobo los Desafios");
+				}
+			}
+		}
+
+		if (notaExa >= 80 && notaDes >= 80)
+		{
+			alert("Aprobo la Materia");
+			if (notaDes == 100 && notaExa == 100)	
+			alert("Felicitaciones por sus Notas!");
+		}
+		else
+		{
+			alert("Reprobo la Materia");
+		}
+	</script>
+</body>
+</html>
