@@ -1,0 +1,38 @@
+<html>
+	<head>
+	</head>
+
+	<body>
+		<script>
+			const N=5;
+			mujer=0;
+			hombre=0;
+			mujeraprobada=0;
+			hombreaprobado=0;
+			for (i=1;1<N;i++){
+				nombre=prompt("Nombre: ");
+				esmasculino=confirm("Es Masculino?");
+					if(siesmasculino)
+						hombre++
+					else
+						mujer++ 
+				nota = parseInt(prompt("Introduzca la Nota: "));
+				if (isNaN(nota))
+					alert("Nota Invalida");
+				else
+					if (nota>80){
+						alert("Usted Aprobo");
+						console.log("Aprobado",i);
+						if(!siesmasculino)
+							mujeraprobada++ 
+						else
+							hombreaprobado++
+					}
+					else alert("Usted Reprobo");
+			}
+			console.log("En la seccion hay ",+mujer," mujeres, y ",+hombre," hombres.")
+			console.log("de los cuales, ",+mujeraprobada," mujeres estan aprobadas, y ",+hombreaprobado," hombres aprobados.")
+		</script>
+	</body>
+
+</html>
