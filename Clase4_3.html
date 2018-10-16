@@ -1,0 +1,29 @@
+<html>
+	<head>
+	</head>
+	<body onload="load()">
+		<p>Se va a cerrar en </p><p id="numero"></p> segundos...</p>
+		<script>
+			var N;
+			function reset(){
+				clearTimeout(N);
+				alert("Click");
+			}
+			function load(){
+				setInterval("is_on_line()",5000);
+			}
+			function is_on_line(){
+				if(!window.navigator.online)
+					alert("No esta en linea");
+				else
+					programar_cerrar();
+			}
+			function programar_cerrar(){
+				N=setTimeout("window.close()",10000);
+			}
+		</script>
+		<input type="button" value="Reestablecer Temporizador" onclik="reset()"/>
+		document.getElementById(numero).innerHTML=
+	</body>
+</html>
+
